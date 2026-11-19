@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="หน้าแนะนำตัวและรูปภาพของธัญชนก">
+  <title>แนะนำตัว | ธัญชนก ยิ้มยินดี</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Noto Sans Thai", "Tahoma", sans-serif;
+      color: #342d43;
+      background: #f8f5ff;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 56px 20px;
+      background:
+        radial-gradient(ellipse at 6% 6%, rgb(255 204 226 / 58%), transparent 32rem),
+        radial-gradient(ellipse at 94% 24%, rgb(207 190 255 / 48%), transparent 34rem),
+        radial-gradient(ellipse at 50% 100%, rgb(255 232 203 / 34%), transparent 34rem),
+        linear-gradient(145deg, #fffafd, #f3efff 58%, #fbf5ff);
+      background-attachment: fixed;
+    }
+
+    main {
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .intro {
+      position: relative;
+      overflow: hidden;
+      padding: 42px;
+      border: 1px solid rgb(255 255 255 / 92%);
+      border-radius: 34px;
+      background:
+        radial-gradient(ellipse at 100% 0%, rgb(236 220 255 / 68%), transparent 34%),
+        linear-gradient(120deg, #fff 8%, #fff8fc 58%, #f5f0ff);
+      box-shadow: 0 24px 64px rgb(68 45 97 / 13%), 0 3px 10px rgb(68 45 97 / 4%);
+    }
+
+    .intro::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #f0a8c9, #c59be9 55%, #f4cd83);
+      content: "";
+    }
+
+    .intro::after {
+      position: absolute;
+      top: -104px;
+      right: -58px;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgb(155 120 197 / 18%);
+      border-radius: 50%;
+      box-shadow: 0 0 0 22px rgb(155 120 197 / 5%), 0 0 0 46px rgb(155 120 197 / 4%), 0 0 0 72px rgb(155 120 197 / 3%);
+      content: "";
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      margin: 0 0 10px;
+      padding: 7px 14px;
+      border: 1px solid #eadcf5;
+      border-radius: 999px;
+      background: rgb(247 239 255 / 88%);
+      color: #79519d;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      box-shadow: 0 4px 12px rgb(115 80 150 / 8%);
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 30px;
+      background: linear-gradient(100deg, #49365e 10%, #875aa2 58%, #bc729a);
+      background-clip: text;
+      color: transparent;
+      font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+      letter-spacing: -0.035em;
+      line-height: 1.2;
+      -webkit-background-clip: text;
+    }
+
+    .details {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 0;
+    }
+
+    .detail {
+      padding: 20px 22px;
+      border: 1px solid #eee5f7;
+      border-left: 4px solid #c9a9df;
+      border-radius: 18px;
+      background: rgb(255 255 255 / 88%);
+      box-shadow: 0 7px 20px rgb(68 45 97 / 5%);
+    }
+
+    .detail dt {
+      margin-bottom: 6px;
+      color: #805a9f;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .detail dd {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .gallery-section {
+      position: relative;
+      overflow: hidden;
+      margin-top: 28px;
+      padding: 32px;
+      border: 1px solid rgb(255 255 255 / 95%);
+      border-radius: 30px;
+      background: rgb(255 255 255 / 78%);
+      box-shadow: 0 18px 48px rgb(68 45 97 / 8%), 0 2px 8px rgb(68 45 97 / 3%);
+      backdrop-filter: blur(8px);
+    }
+
+    .gallery-section::before {
+      position: absolute;
+      top: 0;
+      right: 32px;
+      left: 32px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #eadcf5 18%, #f3d9e7 82%, transparent);
+      content: "";
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 24px;
+      color: #49365e;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    h2::before {
+      width: 9px;
+      height: 30px;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      background: linear-gradient(#ef9fc4, #b18bdf 72%, #f0ca7d);
+      box-shadow: 0 3px 10px rgb(177 139 223 / 35%);
+      content: "";
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 20px;
+    }
+
+    figure {
+      margin: 0;
+      padding: 12px 12px 15px;
+      border: 1px solid #eee7f4;
+      border-radius: 23px;
+      background: linear-gradient(155deg, #fff, #fdfaff);
+      box-shadow: 0 8px 22px rgb(68 45 97 / 7%);
+      text-align: center;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+
+    figure:hover {
+      transform: translateY(-6px);
+      border-color: #dfcce9;
+      box-shadow: 0 18px 32px rgb(68 45 97 / 14%);
+    }
+
+    figure img {
+      display: block;
+      width: min(100%, 5.4cm);
+      height: 5.4cm;
+      margin: 0 auto;
+      border: 4px solid #ead0e5;
+      border-radius: 17px;
+      object-fit: cover;
+      box-shadow: 0 5px 14px rgb(68 45 97 / 10%);
+    }
+
+    .favorites img {
+      border-color: #c9b4e1;
+    }
+
+    .favorites img.yellow-frame {
+      border-color: #f0c642;
+      box-shadow: 0 0 0 3px #fff3c6, 0 6px 18px rgb(189 142 30 / 24%);
+    }
+
+    .second-profile {
+      margin-top: 48px;
+      background:
+        radial-gradient(ellipse at 100% 0%, rgb(220 228 255 / 72%), transparent 34%),
+        linear-gradient(120deg, #fff 8%, #fff8fc 58%, #f3f5ff);
+    }
+
+    .second-profile::before {
+      background: linear-gradient(90deg, #efb0ce, #aa9ce8 55%, #9bc9df);
+    }
+
+    .second-profile .eyebrow {
+      border-color: #e0def6;
+      background: rgb(241 241 255 / 90%);
+      color: #665da1;
+    }
+
+    .second-profile h2 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .photo-placeholder {
+      display: grid;
+      place-items: center;
+      width: min(100%, 5.4cm);
+      height: 5.4cm;
+      margin: 0 auto;
+      padding: 10px;
+      border: 2px dashed #d6b7e5;
+      border-radius: 17px;
+      background: linear-gradient(145deg, #fff8fc, #f5f0ff);
+      color: #8861a9;
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .favorites .photo-placeholder {
+      border-color: #b7a0d7;
+      background: linear-gradient(145deg, #fbf8ff, #f1ebfa);
+      color: #735b94;
+    }
+
+    figcaption {
+      margin-top: 12px;
+      color: #5f526c;
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 24px 14px;
+      }
+
+      .intro,
+      .gallery-section {
+        padding: 22px 18px;
+      }
+
+      .intro {
+        border-radius: 26px;
+      }
+
+      .gallery-section {
+        border-radius: 24px;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      figure {
+        transition: none;
+      }
+
+      figure:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <p class="eyebrow">MY PROFILE</p>
+      <h1>แนะนำตัวเอง</h1>
+      <dl class="details">
+        <div class="detail">
+          <dt>ชื่อ-นามสกุล</dt>
+          <dd>นางสาวธัญชนก ยิ้มยินดี</dd>
+        </div>
+        <div class="detail">
+          <dt>คณะที่ชอบ</dt>
+          <dd>บริหารธุรกิจ สาขาบัญชีบัณฑิต</dd>
+        </div>
+      </dl>
+    </header>
+
+    <section class="gallery-section" aria-labelledby="my-photos">
+      <h2 id="my-photos">รูปภาพของฉัน</h2>
+      <div class="gallery">
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=1XYHOfCK5Qify2pF0h3XdozlkiFDl2FbF&amp;sz=w1000" alt="รูปภาพของฉัน 1">
+          <figcaption>รูปภาพของฉัน</figcaption>
+        </figure>
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=1zBXJ-H7EQr_7PYtz5o1V7jYkXubN6DM_&amp;sz=w1000" alt="รูปภาพของฉัน 2">
+          <figcaption>รูปภาพของฉัน</figcaption>
+        </figure>
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=1RrOc0uB2CQkR8q6nd1pCgVfjtlZ5PYtB&amp;sz=w1000" alt="รูปภาพของฉัน 3">
+          <figcaption>รูปภาพของฉัน</figcaption>
+        </figure>
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=1-iVkz-sEuO-XDqs7fj034T7cerYGzdG7&amp;sz=w1000" alt="รูปภาพของฉัน 4">
+          <figcaption>รูปภาพของฉัน</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="gallery-section favorites" aria-labelledby="favorites">
+      <h2 id="favorites">สิ่งที่ชอบ</h2>
+      <div class="gallery">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="ทะเล">
+          <figcaption>ทะเล</figcaption>
+        </figure>
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=1Hu_XQTeq61IvEFp-5nBm-ds_GLXyFrDb&amp;sz=w1000" alt="ภูเขา">
+          <figcaption>ภูเขา</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="น้ำตก">
+          <figcaption>น้ำตก</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="ภูเขาไฟฟูจิ">
+          <figcaption>ภูเขาไฟฟูจิ</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <header class="intro second-profile">
+      <p class="eyebrow">PROFILE 02</p>
+      <h2 id="second-profile-title">แนะนำตัวคนที่ 2</h2>
+      <dl class="details">
+        <div class="detail">
+          <dt>ชื่อ-นามสกุล</dt>
+          <dd>นางสาว ทักษอร ทัพน้อย</dd>
+        </div>
+        <div class="detail">
+          <dt>คณะที่ชอบ</dt>
+          <dd>คณะพยาบาลศาสตร์</dd>
+        </div>
+      </dl>
+    </header>
+
+    <section class="gallery-section" aria-labelledby="second-my-photos">
+      <h2 id="second-my-photos">รูปภาพตัวเอง</h2>
+      <div class="gallery">
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=1V9hTE0fx9fz1uQiSQlO0rYTeGLbtPM_P&amp;sz=w1000" alt="รูปภาพตัวเอง 1">
+          <figcaption>รูปภาพตัวเอง</figcaption>
+        </figure>
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=13TAOUphFEFy2bsuI0XuwgnHdrtsDzuEi&amp;sz=w1000" alt="รูปภาพตัวเอง 2">
+          <figcaption>รูปภาพตัวเอง</figcaption>
+        </figure>
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=1ZzJiXfhBI_enxzmwhRVez5-nYwt4mDf0&amp;sz=w1000" alt="รูปภาพตัวเอง 3">
+          <figcaption>รูปภาพตัวเอง</figcaption>
+        </figure>
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=16KIKBImaDghD6yy8jElov_zgiaQ8RVTv&amp;sz=w1000" alt="รูปภาพตัวเอง 4">
+          <figcaption>รูปภาพตัวเอง</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="gallery-section favorites" aria-labelledby="second-favorites">
+      <h2 id="second-favorites">สิ่งที่ชอบ</h2>
+      <div class="gallery">
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=15UtXZyNzmdqJpt-kbQ_Md4bNV-GydRkX&amp;sz=w1000" alt="สิ่งที่ชอบ">
+          <figcaption>สิ่งที่ชอบ</figcaption>
+        </figure>
+        <figure>
+          <img class="yellow-frame" src="https://drive.google.com/thumbnail?id=10MJ4UvrOE3GeP7C99TFvkxRtSw_MF4Ir&amp;sz=w1000" alt="รูปสิ่งที่ชอบ">
+          <figcaption>สิ่งที่ชอบ</figcaption>
+        </figure>
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=1Na_sSDbgCMLrSnc6TEcGLOeKFqaIU1uu&amp;sz=w1000" alt="รูปสิ่งที่ชอบ 3">
+          <figcaption>สิ่งที่ชอบ</figcaption>
+        </figure>
+        <figure>
+          <img src="https://drive.google.com/thumbnail?id=1mi1vFL9l0cC76A-cQj68QWE6c041zcC9&amp;sz=w1000" alt="รูปสิ่งที่ชอบ 4">
+          <figcaption>สิ่งที่ชอบ</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
